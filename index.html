@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENTO — Volunteer Management</title>
+    <meta name="description" content="Accountability-first platform connecting volunteers with event organizers through transparent, verified workflows." />
+    <meta name="author" content="EVENTO" />
+    <meta property="og:title" content="EVENTO — Event × Volunteer Management" />
+    <meta property="og:description" content="Accountability-first platform connecting volunteers with event organizers." />
+    <meta property="og:type" content="website" />
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/tailwind-config.js"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <main class="min-h-screen bg-background">
+        <!-- Hero Section -->
+        <section class="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-6 py-20">
+            <div
+                class="absolute inset-0 bg-cover bg-center opacity-40"
+                style="background-image: url('assets/hero-bg.jpg')"
+            ></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-background/60 via-background/80 to-background"></div>
+
+            <div class="relative z-10 text-center max-w-lg mx-auto">
+                <div class="mb-6 flex justify-center">
+                    <div class="w-20 h-20 diamond bg-primary flex items-center justify-center">
+                        <span class="font-display text-2xl text-primary-foreground rotate-0">E</span>
+                    </div>
+                </div>
+
+                <h1 class="text-7xl md:text-9xl font-display tracking-wider text-gradient mb-4 animate-fade-up">
+                    EVENTO
+                </h1>
+
+                <p class="text-lg md:text-xl text-muted-foreground mb-2 animate-fade-up" style="animation-delay: 0.1s">
+                    Event × Volunteer Management Platform
+                </p>
+
+                <p class="text-sm text-muted-foreground mb-8 animate-fade-up" style="animation-delay: 0.2s">
+                    Accountability-first. Transparent. Trusted.
+                </p>
+
+                <a
+                    href="https://drive.google.com/your-brochure-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-2 bg-primary text-primary-foreground font-semibold px-8 py-4 rounded-lg glow hover:opacity-90 transition-opacity animate-fade-up"
+                    style="animation-delay: 0.3s"
+                >
+                    <i data-lucide="external-link" class="w-5 h-5"></i>
+                    View Brochure
+                </a>
+            </div>
+
+            <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-1.5">
+                <div class="w-1.5 h-1.5 rounded-full bg-primary/40"></div>
+                <div class="w-1.5 h-1.5 rounded-full bg-primary/40"></div>
+                <div class="w-1.5 h-1.5 rounded-full bg-primary/40"></div>
+                <div class="w-1.5 h-1.5 rounded-full bg-primary/40"></div>
+                <div class="w-1.5 h-1.5 rounded-full bg-primary/40"></div>
+            </div>
+        </section>
+
+        <!-- Problem Section -->
+        <section class="px-6 py-16">
+            <div class="max-w-lg mx-auto">
+                <h2 class="text-4xl md:text-5xl font-display tracking-wide text-foreground mb-2">
+                    THE PROBLEM
+                </h2>
+                <div class="w-16 h-1 bg-primary mb-8 rounded-full"></div>
+
+                <p class="text-muted-foreground mb-10 leading-relaxed">
+                    The event-volunteer sector suffers from fragmented, informal coordination, leading to frequent no-shows, payment disputes, and a total lack of accountability.
+                </p>
+
+                <div class="space-y-4">
+                    <!-- Problem 1 -->
+                    <div class="flex items-start gap-4 bg-card border border-border p-5 rounded-lg corner-cut">
+                        <div class="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center shrink-0">
+                            <i data-lucide="alert-triangle" class="w-5 h-5 text-primary"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-display text-xl tracking-wide text-foreground mb-1">No-Shows</h3>
+                            <p class="text-sm text-muted-foreground">Frequent last-minute cancellations with no backup system in place.</p>
+                        </div>
+                    </div>
+                    <!-- Problem 2 -->
+                    <div class="flex items-start gap-4 bg-card border border-border p-5 rounded-lg corner-cut">
+                        <div class="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center shrink-0">
+                            <i data-lucide="credit-card" class="w-5 h-5 text-primary"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-display text-xl tracking-wide text-foreground mb-1">Payment Disputes</h3>
+                            <p class="text-sm text-muted-foreground">No verified payment tracking leads to fraud and delayed payments.</p>
+                        </div>
+                    </div>
+                    <!-- Problem 3 -->
+                    <div class="flex items-start gap-4 bg-card border border-border p-5 rounded-lg corner-cut">
+                        <div class="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center shrink-0">
+                            <i data-lucide="ban" class="w-5 h-5 text-primary"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-display text-xl tracking-wide text-foreground mb-1">Zero Accountability</h3>
+                            <p class="text-sm text-muted-foreground">Informal WhatsApp coordination with no records or enforcement.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Innovation Section -->
+        <section class="px-6 py-16 bg-secondary/30">
+            <div class="max-w-lg mx-auto">
+                <h2 class="text-4xl md:text-5xl font-display tracking-wide text-foreground mb-2">
+                    THE INNOVATION
+                </h2>
+                <div class="w-16 h-1 bg-primary mb-8 rounded-full"></div>
+
+                <p class="text-muted-foreground mb-10 leading-relaxed">
+                    This innovation replaces unorganized WhatsApp groups with a transparent, rule-driven digital platform. By centralizing applications and verifying users, it ensures accountability, fair payments, and professional reliability.
+                </p>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <!-- Feature 1 -->
+                    <div class="bg-card border border-border p-5 rounded-lg text-center group hover:border-primary/50 transition-colors">
+                        <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                            <i data-lucide="shield-check" class="w-6 h-6 text-primary"></i>
+                        </div>
+                        <p class="text-sm font-semibold text-foreground">Verified Payment Guards</p>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div class="bg-card border border-border p-5 rounded-lg text-center group hover:border-primary/50 transition-colors">
+                        <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                            <i data-lucide="users" class="w-6 h-6 text-primary"></i>
+                        </div>
+                        <p class="text-sm font-semibold text-foreground">Two-Way Accountability</p>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div class="bg-card border border-border p-5 rounded-lg text-center group hover:border-primary/50 transition-colors">
+                        <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                            <i data-lucide="scale" class="w-6 h-6 text-primary"></i>
+                        </div>
+                        <p class="text-sm font-semibold text-foreground">Centralized Dispute Resolution</p>
+                    </div>
+                    <!-- Feature 4 -->
+                    <div class="bg-card border border-border p-5 rounded-lg text-center group hover:border-primary/50 transition-colors">
+                        <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                            <i data-lucide="star" class="w-6 h-6 text-primary"></i>
+                        </div>
+                        <p class="text-sm font-semibold text-foreground">Review-Based Trust</p>
+                    </div>
+                </div>
+
+                <blockquote class="mt-10 border-l-4 border-primary pl-4">
+                    <p class="text-xl font-display tracking-wide text-foreground">
+                        "Innovation leads us, integrity defines us"
+                    </p>
+                </blockquote>
+            </div>
+        </section>
+
+        <!-- Impact Section -->
+        <section class="px-6 py-16">
+            <div class="max-w-lg mx-auto space-y-14">
+                <!-- Existing Gaps -->
+                <div>
+                    <h2 class="text-4xl font-display tracking-wide text-foreground mb-2">EXISTING GAPS</h2>
+                    <div class="w-16 h-1 bg-primary mb-6 rounded-full"></div>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3 text-muted-foreground text-sm">
+                            <span class="mt-1.5 w-2 h-2 rounded-full bg-primary shrink-0"></span>
+                            WhatsApp Groups: Unorganized, unreliable
+                        </li>
+                        <li class="flex items-start gap-3 text-muted-foreground text-sm">
+                            <span class="mt-1.5 w-2 h-2 rounded-full bg-primary shrink-0"></span>
+                            Personal Networks: Limited to who you know
+                        </li>
+                        <li class="flex items-start gap-3 text-muted-foreground text-sm">
+                            <span class="mt-1.5 w-2 h-2 rounded-full bg-primary shrink-0"></span>
+                            Job Apps: Only permanent jobs, no volunteering
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Impact -->
+                <div>
+                    <h2 class="text-4xl font-display tracking-wide text-foreground mb-2">OUR APP IMPACT</h2>
+                    <div class="w-16 h-1 bg-primary mb-6 rounded-full"></div>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4">
+                            <div class="w-9 h-9 rounded-md bg-primary/10 flex items-center justify-center shrink-0">
+                                <i data-lucide="zap" class="w-5 h-5 text-primary"></i>
+                            </div>
+                            <p class="text-sm text-muted-foreground pt-1.5">Hiring time crushed — days collapse into minutes</p>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-9 h-9 rounded-md bg-primary/10 flex items-center justify-center shrink-0">
+                                <i data-lucide="graduation-cap" class="w-5 h-5 text-primary"></i>
+                            </div>
+                            <p class="text-sm text-muted-foreground pt-1.5">Creates income for college students & part-time workers</p>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-9 h-9 rounded-md bg-primary/10 flex items-center justify-center shrink-0">
+                                <i data-lucide="trending-up" class="w-5 h-5 text-primary"></i>
+                            </div>
+                            <p class="text-sm text-muted-foreground pt-1.5">Fewer staffing failures — reliability becomes the default</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Future -->
+                <div>
+                    <h2 class="text-4xl font-display tracking-wide text-foreground mb-2">FUTURE SCALING</h2>
+                    <div class="w-16 h-1 bg-primary mb-6 rounded-full"></div>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4">
+                            <div class="w-9 h-9 rounded-md bg-primary/10 flex items-center justify-center shrink-0">
+                                <i data-lucide="users-round" class="w-5 h-5 text-primary"></i>
+                            </div>
+                            <p class="text-sm text-muted-foreground pt-1.5">Volunteers can join in groups</p>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-9 h-9 rounded-md bg-primary/10 flex items-center justify-center shrink-0">
+                                <i data-lucide="clipboard-check" class="w-5 h-5 text-primary"></i>
+                            </div>
+                            <p class="text-sm text-muted-foreground pt-1.5">Integrated worker attendance system</p>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-9 h-9 rounded-md bg-primary/10 flex items-center justify-center shrink-0">
+                                <i data-lucide="map-pin" class="w-5 h-5 text-primary"></i>
+                            </div>
+                            <p class="text-sm text-muted-foreground pt-1.5">Multi-city rollout across Gujarat, then whole country</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Founders Section -->
+        <section class="px-6 py-16 bg-secondary/30" id="founders">
+            <div class="max-w-lg mx-auto">
+                <h2 class="text-4xl md:text-5xl font-display tracking-wide text-foreground mb-2">
+                    MEET THE FOUNDERS
+                </h2>
+                <div class="w-16 h-1 bg-primary mb-10 rounded-full"></div>
+
+                <div class="space-y-5">
+                    <!-- Founder 1 -->
+                    <div class="bg-card border border-border p-6 rounded-lg corner-cut">
+                        <div class="w-14 h-14 diamond bg-primary/20 flex items-center justify-center mb-4">
+                            <span class="font-display text-xl text-primary">A</span>
+                        </div>
+                        <h3 class="font-display text-2xl tracking-wide text-foreground">Akash Dobariya</h3>
+                        <p class="text-sm text-primary mb-4">Backend Developer</p>
+
+                        <div class="space-y-2">
+                            <a href="tel:+918238218366" class="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
+                                <i data-lucide="phone" class="w-4 h-4 text-primary"></i>
+                                +91 82382 18366
+                            </a>
+                            <a href="mailto:AakashDobariya99@gmail.com" class="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
+                                <i data-lucide="mail" class="w-4 h-4 text-primary"></i>
+                                AakashDobariya99@gmail.com
+                            </a>
+                            <a href="https://www.linkedin.com/in/akash-dobariya-0b4828336/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
+                                <i data-lucide="linkedin" class="w-4 h-4 text-primary"></i>
+                                LinkedIn
+                            </a>
+                            <a href="https://github.com/Akash-dobariya" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
+                                <i data-lucide="github" class="w-4 h-4 text-primary"></i>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Founder 2 -->
+                    <div class="bg-card border border-border p-6 rounded-lg corner-cut">
+                        <div class="w-14 h-14 diamond bg-primary/20 flex items-center justify-center mb-4">
+                            <span class="font-display text-xl text-primary">P</span>
+                        </div>
+                        <h3 class="font-display text-2xl tracking-wide text-foreground">Piyush Thummar</h3>
+                        <p class="text-sm text-primary mb-4">Full-Stack, Project Manager</p>
+
+                        <div class="space-y-2">
+                            <a href="tel:+919601692507" class="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
+                                <i data-lucide="phone" class="w-4 h-4 text-primary"></i>
+                                +91 96016 92507
+                            </a>
+                            <a href="mailto:PiyushThummar7@gmail.com" class="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
+                                <i data-lucide="mail" class="w-4 h-4 text-primary"></i>
+                                PiyushThummar7@gmail.com
+                            </a>
+                            <a href="https://www.linkedin.com/in/piyushjt/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
+                                <i data-lucide="linkedin" class="w-4 h-4 text-primary"></i>
+                                LinkedIn
+                            </a>
+                            <a href="https://github.com/piyushJT" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
+                                <i data-lucide="github" class="w-4 h-4 text-primary"></i>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Section -->
+        <footer class="px-6 py-12 border-t border-border">
+            <div class="max-w-lg mx-auto text-center">
+                <p class="text-xs text-muted-foreground">
+                    © 2026 EVENTO — Innovation Village, LJ University
+                </p>
+            </div>
+        </footer>
+
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
