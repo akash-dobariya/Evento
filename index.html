@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EVENTO — Volunteer Management</title>
-    <meta name="description" content="Accountability-first platform connecting volunteers with event organizers through transparent, verified workflows." />
+    <title>EVENTO — Event × Volunteer Management Platform</title>
+    <meta name="description" content="Accountability-first platform connecting volunteers with event organizers through transparent, verified workflows. No more no-shows, payment disputes, or informal coordination." />
     <meta name="author" content="EVENTO" />
     <meta property="og:title" content="EVENTO — Event × Volunteer Management" />
     <meta property="og:description" content="Accountability-first platform connecting volunteers with event organizers." />
     <meta property="og:type" content="website" />
-    
+
     <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="js/tailwind-config.js"></script>
@@ -23,314 +25,336 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <main class="min-h-screen bg-background">
-        <!-- Hero Section -->
-        <section class="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-6 py-20">
-            <div
-                class="absolute inset-0 bg-cover bg-center opacity-40"
-                style="background-image: url('assets/hero-bg.jpg')"
-            ></div>
-            <div class="absolute inset-0 bg-gradient-to-b from-background/60 via-background/80 to-background"></div>
-<!-- LOGO  -->
-            <div class="relative z-10 text-center max-w-lg mx-auto">
-                <div class="mb-8  flex justify-center">
-                    <div class="w-32 h-32  md:w-40 md:h-40 logo-container flex items-center justify-center">
-                        <img src="assets/evento-user-dark.jpg.jpeg" class="rounded-lg" alt="EVENTO Logo" >
+
+    <!-- ═══════ NAVBAR ═══════ -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-inner">
+            <a href="#" class="nav-logo">
+                <img src="assets/evento-user-dark.jpg.jpeg" alt="EVENTO">
+                <span>EVENTO</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#problem">Problem</a></li>
+                <li><a href="#solution">Solution</a></li>
+                <li><a href="#impact">Impact</a></li>
+                <li><a href="#founders">Team</a></li>
+            </ul>
+            <!-- <a href="https://drive.google.com/file/d/1ZiP-8fsPQBcIk674kISBpMOXFLA5Ghuf/view?usp=drivesdk"
+               target="_blank" rel="noopener noreferrer" class="nav-cta">
+                <span style="display:inline-flex;align-items:center;gap:6px;">
+                    <i data-lucide="download" style="width:14px;height:14px;"></i> Brochure
+                </span>
+            </a> -->
+            <button class="mobile-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="#problem">Problem</a>
+        <a href="#solution">Solution</a>
+        <a href="#impact">Impact</a>
+        <a href="#founders">Team</a>
+        <!-- <a href="https://drive.google.com/file/d/1ZiP-8fsPQBcIk674kISBpMOXFLA5Ghuf/view?usp=drivesdk"
+           target="_blank" rel="noopener noreferrer" style="color: hsl(142, 71%, 45%);">
+            View Brochure
+        </a> -->
+    </div>
+
+    <main>
+        <!-- ═══════ HERO ═══════ -->
+        <section class="hero" id="hero">
+            <div class="hero-bg" style="background-image: url('assets/hero-bg.png')"></div>
+            <div class="hero-overlay"></div>
+            <canvas id="particle-canvas"></canvas>
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+
+            <div class="hero-content">
+                <div class="hero-badge reveal">
+                    <span class="dot"></span>
+                    Building the Future of Volunteering
+                </div>
+
+                <div class="reveal reveal-delay-1" style="margin-bottom:1.5rem;">
+                    <div style="display:flex;justify-content:center;margin-bottom:1.5rem;">
+                        <div class="logo-container" style="width:100px;height:100px;">
+                            <img src="assets/evento-user-dark.jpg.jpeg" style="border-radius:16px;" alt="EVENTO Logo">
+                        </div>
                     </div>
                 </div>
 
-                <h1 class="text-7xl md:text-9xl font-display tracking-wider text-gradient mb-4 animate-fade-up">
-                    EVENTO
-                </h1>
+                <h1 class="hero-title text-gradient reveal reveal-delay-1">EVENTO</h1>
 
-                <p class="text-lg md:text-xl text-muted-foreground mb-2 animate-fade-up" style="animation-delay: 0.1s">
-                    Event × Volunteer Management Platform
+                <p class="hero-subtitle reveal reveal-delay-2">
+                    The accountability-first platform connecting <strong style="color:hsl(var(--foreground))">volunteers</strong>
+                    with <strong style="color:hsl(var(--foreground))">event organizers</strong> — transparently.
                 </p>
 
-                <p class="text-sm text-muted-foreground mb-8 animate-fade-up" style="animation-delay: 0.2s">
-                    Accountability-first. Transparent. Trusted.
+                <p class="hero-tagline reveal reveal-delay-2">
+                    No more <strong style="color:#fff">WhatsApp</strong> chaos. No more no-shows. Just trust.
                 </p>
 
-                <a
-                    href="https://drive.google.com/file/d/1ZiP-8fsPQBcIk674kISBpMOXFLA5Ghuf/view?usp=drivesdk"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="inline-flex items-center gap-2 bg-primary text-primary-foreground font-semibold px-8 py-4 rounded-lg glow hover:opacity-90 transition-opacity animate-fade-up"
-                    style="animation-delay: 0.3s"
-                >
-                    <i data-lucide="external-link" class="w-5 h-5"></i>
-                    View Brochure
-                </a>
-            </div>
-
-            <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-1.5">
-                <div class="w-1.5 h-1.5 rounded-full bg-primary/40"></div>
-                <div class="w-1.5 h-1.5 rounded-full bg-primary/40"></div>
-                <div class="w-1.5 h-1.5 rounded-full bg-primary/40"></div>
-                <div class="w-1.5 h-1.5 rounded-full bg-primary/40"></div>
-                <div class="w-1.5 h-1.5 rounded-full bg-primary/40"></div>
-            </div>
-        </section>
-
-        <!-- Problem Section -->
-        <section class="px-6 py-16">
-            <div class="max-w-lg mx-auto">
-                <h2 class="text-4xl md:text-5xl font-display tracking-wide text-foreground mb-2">
-                    THE PROBLEM
-                </h2>
-                <div class="w-16 h-1 bg-primary mb-8 rounded-full"></div>
-
-                <p class="text-muted-foreground mb-10 leading-relaxed">
-                    The event-volunteer sector suffers from fragmented, informal coordination, leading to frequent no-shows, payment disputes, and a total lack of accountability.
-                </p>
-
-                <div class="space-y-4">
-                    <!-- Problem 1 -->
-                    <div class="flex items-start gap-4 bg-card border border-border p-5 rounded-lg corner-cut">
-                        <div class="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center shrink-0">
-                            <i data-lucide="alert-triangle" class="w-5 h-5 text-primary"></i>
-                        </div>
-                        <div>
-                            <h3 class="font-display text-xl tracking-wide text-foreground mb-1">No-Shows</h3>
-                            <p class="text-sm text-muted-foreground">Frequent last-minute cancellations with no backup system in place.</p>
-                        </div>
-                    </div>
-                    <!-- Problem 2 -->
-                    <div class="flex items-start gap-4 bg-card border border-border p-5 rounded-lg corner-cut">
-                        <div class="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center shrink-0">
-                            <i data-lucide="credit-card" class="w-5 h-5 text-primary"></i>
-                        </div>
-                        <div>
-                            <h3 class="font-display text-xl tracking-wide text-foreground mb-1">Payment Disputes</h3>
-                            <p class="text-sm text-muted-foreground">No verified payment tracking leads to fraud and delayed payments.</p>
-                        </div>
-                    </div>
-                    <!-- Problem 3 -->
-                    <div class="flex items-start gap-4 bg-card border border-border p-5 rounded-lg corner-cut">
-                        <div class="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center shrink-0">
-                            <i data-lucide="ban" class="w-5 h-5 text-primary"></i>
-                        </div>
-                        <div>
-                            <h3 class="font-display text-xl tracking-wide text-foreground mb-1">Zero Accountability</h3>
-                            <p class="text-sm text-muted-foreground">Informal WhatsApp coordination with no records or enforcement.</p>
-                        </div>
-                    </div>
+                <div class="hero-actions reveal reveal-delay-3">
+                    <!-- <a href="https://drive.google.com/file/d/1ZiP-8fsPQBcIk674kISBpMOXFLA5Ghuf/view?usp=drivesdk"
+                       target="_blank" rel="noopener noreferrer" class="btn-primary">
+                        <i data-lucide="external-link" style="width:18px;height:18px;"></i>
+                        View Brochure
+                    </a> -->
+                    <a href="#problem" class="btn-secondary">
+                        <i data-lucide="arrow-down" style="width:18px;height:18px;"></i>
+                        Learn More
+                    </a>
                 </div>
+            </div>
+
+            <div class="hero-scroll-indicator">
+                <div class="scroll-mouse"></div>
+                <span class="scroll-text">Scroll</span>
             </div>
         </section>
 
-        <!-- Innovation Section -->
-        <section class="px-6 py-16 bg-secondary/30">
-            <div class="max-w-lg mx-auto">
-                <h2 class="text-4xl md:text-5xl font-display tracking-wide text-foreground mb-2">
-                    THE INNOVATION
-                </h2>
-                <div class="w-16 h-1 bg-primary mb-8 rounded-full"></div>
-
-                <p class="text-muted-foreground mb-10 leading-relaxed">
-                    This innovation replaces unorganized WhatsApp groups with a transparent, rule-driven digital platform. By centralizing applications and verifying users, it ensures accountability, fair payments, and professional reliability.
-                </p>
-
-                <div class="grid grid-cols-2 gap-4">
-                    <!-- Feature 1 -->
-                    <div class="bg-card border border-border p-5 rounded-lg text-center group hover:border-primary/50 transition-colors">
-                        <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                            <i data-lucide="shield-check" class="w-6 h-6 text-primary"></i>
-                        </div>
-                        <p class="text-sm font-semibold text-foreground">Verified Payment Guards</p>
-                    </div>
-                    <!-- Feature 2 -->
-                    <div class="bg-card border border-border p-5 rounded-lg text-center group hover:border-primary/50 transition-colors">
-                        <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                            <i data-lucide="users" class="w-6 h-6 text-primary"></i>
-                        </div>
-                        <p class="text-sm font-semibold text-foreground">Two-Way Accountability</p>
-                    </div>
-                    <!-- Feature 3 -->
-                    <div class="bg-card border border-border p-5 rounded-lg text-center group hover:border-primary/50 transition-colors">
-                        <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                            <i data-lucide="scale" class="w-6 h-6 text-primary"></i>
-                        </div>
-                        <p class="text-sm font-semibold text-foreground">Centralized Dispute Resolution</p>
-                    </div>
-                    <!-- Feature 4 -->
-                    <div class="bg-card border border-border p-5 rounded-lg text-center group hover:border-primary/50 transition-colors">
-                        <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                            <i data-lucide="star" class="w-6 h-6 text-primary"></i>
-                        </div>
-                        <p class="text-sm font-semibold text-foreground">Review-Based Trust</p>
-                    </div>
-                </div>
-
-                <blockquote class="mt-9 stylish-quote">
-                    <p class="text-2xl md:text-2xl font-display  tracking-wider ">
-                       " ESTABLISHING A NEW STANDARD FOR EVENT VOLUNTEERING "
+        <!-- ═══════ PROBLEM ═══════ -->
+        <section class="section" id="problem">
+            <div class="section-inner">
+                <div class="section-header reveal">
+                    <span class="section-label">The Problem</span>
+                    <h2 class="section-title">The Industry is <span class="text-gradient">Broken</span></h2>
+                    <p class="section-desc">
+                        The event-volunteer sector suffers from fragmented, informal coordination — leading to frequent no-shows, payment disputes, and zero accountability.
                     </p>
+                </div>
+
+                <div class="problem-grid">
+                    <div class="problem-card reveal reveal-delay-1">
+                        <div class="problem-icon">
+                            <i data-lucide="alert-triangle" style="width:24px;height:24px;"></i>
+                        </div>
+                        <h3>Chronic No-Shows</h3>
+                        <p>Last-minute cancellations with zero backup systems. Organizers are left scrambling, events suffer, and trust evaporates.</p>
+                    </div>
+                    <div class="problem-card reveal reveal-delay-2">
+                        <div class="problem-icon">
+                            <i data-lucide="credit-card" style="width:24px;height:24px;"></i>
+                        </div>
+                        <h3>Payment Disputes</h3>
+                        <p>No verified payment tracking creates a breeding ground for fraud, delayed payments, and broken promises between parties.</p>
+                    </div>
+                    <div class="problem-card reveal reveal-delay-3">
+                        <div class="problem-icon">
+                            <i data-lucide="ban" style="width:24px;height:24px;"></i>
+                        </div>
+                        <h3>Zero Accountability</h3>
+                        <p>Informal WhatsApp coordination with no records, no enforcement, and no consequences. Anyone can ghost without repercussions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════ STATS STRIP ═══════ -->
+        <section class="section section-alt" style="padding-top:3rem;padding-bottom:3rem;">
+            <div class="section-inner">
+                <div class="stats-strip reveal">
+                    <div class="stat-item">
+                        <h3 data-count="40" data-suffix="%">0%</h3>
+                        <p>Volunteer No-Show Rate</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3 data-count="50" data-suffix="%">0%</h3>
+                        <p>Payment Disputes</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3 data-count="0" data-prefix="~" data-suffix="">0</h3>
+                        <p>Formal Platforms Exist</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3 data-count="100" data-suffix="%">0%</h3>
+                        <p>WhatsApp Dependent</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════ SOLUTION / INNOVATION ═══════ -->
+        <section class="section" id="solution">
+            <div class="section-inner">
+                <div class="section-header reveal">
+                    <span class="section-label">The Innovation</span>
+                    <h2 class="section-title">Built for <span class="text-gradient">Trust</span></h2>
+                    <p class="section-desc">
+                        EVENTO replaces unorganized WhatsApp groups with a transparent, rule-driven digital platform. Centralized applications, verified users, and enforced accountability.
+                    </p>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-card reveal reveal-delay-1">
+                        <div class="feature-icon">
+                            <i data-lucide="shield-check" style="width:28px;height:28px;"></i>
+                        </div>
+                        <h3>Verified Payment Guards</h3>
+                        <p>Every transaction is tracked and verified. No more disputes or delayed payments.</p>
+                    </div>
+                    <div class="feature-card reveal reveal-delay-2">
+                        <div class="feature-icon">
+                            <i data-lucide="users" style="width:28px;height:28px;"></i>
+                        </div>
+                        <h3>Two-Way Accountability</h3>
+                        <p>Both organizers and volunteers are held to the same standard — reviews work both ways.</p>
+                    </div>
+                    <div class="feature-card reveal reveal-delay-3">
+                        <div class="feature-icon">
+                            <i data-lucide="scale" style="width:28px;height:28px;"></i>
+                        </div>
+                        <h3>Dispute Resolution</h3>
+                        <p>Centralized conflict management ensures fair outcomes for every party involved.</p>
+                    </div>
+                    <div class="feature-card reveal reveal-delay-4">
+                        <div class="feature-icon">
+                            <i data-lucide="star" style="width:28px;height:28px;"></i>
+                        </div>
+                        <h3>Review-Based Trust</h3>
+                        <p>A reputation system that rewards reliability and transparency over time.</p>
+                    </div>
+                </div>
+
+                <blockquote class="stylish-quote reveal">
+                    <p>" ESTABLISHING A NEW STANDARD FOR EVENT VOLUNTEERING "</p>
                 </blockquote>
             </div>
         </section>
 
-        <!-- Impact Section -->
-        <section class="px-6 py-16">
-            <div class="max-w-lg mx-auto space-y-14">
-                <!-- Existing Gaps -->
-                <div>
-                    <h2 class="text-4xl font-display tracking-wide text-foreground mb-2">EXISTING GAPS</h2>
-                    <div class="w-16 h-1 bg-primary mb-6 rounded-full"></div>
-                    <ul class="space-y-3">
-                        <li class="flex items-start gap-3 text-muted-foreground text-sm">
-                            <span class="mt-1.5 w-2 h-2 rounded-full bg-primary shrink-0"></span>
-                            WhatsApp Groups: Unorganized, unreliable
-                        </li>
-                        <li class="flex items-start gap-3 text-muted-foreground text-sm">
-                            <span class="mt-1.5 w-2 h-2 rounded-full bg-primary shrink-0"></span>
-                            Personal Networks: Limited to who you know
-                        </li>
-                        <li class="flex items-start gap-3 text-muted-foreground text-sm">
-                            <span class="mt-1.5 w-2 h-2 rounded-full bg-primary shrink-0"></span>
-                            Job Apps: Only permanent jobs, no volunteering
-                        </li>
-                    </ul>
+        <!-- ═══════ IMPACT & FUTURE ═══════ -->
+        <section class="section section-alt" id="impact">
+            <div class="section-inner">
+                <div class="section-header reveal">
+                    <span class="section-label">Why It Matters</span>
+                    <h2 class="section-title">Impact & <span class="text-gradient">Vision</span></h2>
                 </div>
 
-                <!-- Impact -->
-                <div>
-                    <h2 class="text-4xl font-display tracking-wide text-foreground mb-2">OUR APP IMPACT</h2>
-                    <div class="w-16 h-1 bg-primary mb-6 rounded-full"></div>
-                    <div class="space-y-4">
-                        <div class="flex items-start gap-4">
-                            <div class="w-9 h-9 rounded-md bg-primary/10 flex items-center justify-center shrink-0">
-                                <i data-lucide="zap" class="w-5 h-5 text-primary"></i>
-                            </div>
-                            <p class="text-sm text-muted-foreground pt-1.5">Hiring time crushed — days collapse into minutes</p>
-                        </div>
-                        <div class="flex items-start gap-4">
-                            <div class="w-9 h-9 rounded-md bg-primary/10 flex items-center justify-center shrink-0">
-                                <i data-lucide="graduation-cap" class="w-5 h-5 text-primary"></i>
-                            </div>
-                            <p class="text-sm text-muted-foreground pt-1.5">Creates income for college students & part-time workers</p>
-                        </div>
-                        <div class="flex items-start gap-4">
-                            <div class="w-9 h-9 rounded-md bg-primary/10 flex items-center justify-center shrink-0">
-                                <i data-lucide="trending-up" class="w-5 h-5 text-primary"></i>
-                            </div>
-                            <p class="text-sm text-muted-foreground pt-1.5">Fewer staffing failures — reliability becomes the default</p>
-                        </div>
+                <div class="impact-layout">
+                    <!-- Existing Gaps -->
+                    <div class="impact-block reveal">
+                        <h3 style="color:#fff">Existing Gaps</h3>
+                        <div class="impact-bar"></div>
+                        <ul class="impact-list">
+                            <li class="impact-item">
+                                <div class="impact-dot"><i data-lucide="message-circle"></i></div>
+                                <p><strong>WhatsApp Groups</strong> — Unorganized, unreliable, zero tracking</p>
+                            </li>
+                            <li class="impact-item">
+                                <div class="impact-dot"><i data-lucide="user-x"></i></div>
+                                <p><strong>Personal Networks</strong> — Limited to who you already know</p>
+                            </li>
+                            <li class="impact-item">
+                                <div class="impact-dot"><i data-lucide="briefcase"></i></div>
+                                <p><strong>Job Platforms</strong> — Built for permanent roles, not volunteering</p>
+                            </li>
+                        </ul>
                     </div>
-                </div>
 
-                <!-- Future -->
-                <div>
-                    <h2 class="text-4xl font-display tracking-wide text-foreground mb-2">FUTURE SCALING</h2>
-                    <div class="w-16 h-1 bg-primary mb-6 rounded-full"></div>
-                    <div class="space-y-4">
-                        <div class="flex items-start gap-4">
-                            <div class="w-9 h-9 rounded-md bg-primary/10 flex items-center justify-center shrink-0">
-                                <i data-lucide="users-round" class="w-5 h-5 text-primary"></i>
-                            </div>
-                            <p class="text-sm text-muted-foreground pt-1.5">Volunteers can join in groups</p>
-                        </div>
-                        <div class="flex items-start gap-4">
-                            <div class="w-9 h-9 rounded-md bg-primary/10 flex items-center justify-center shrink-0">
-                                <i data-lucide="clipboard-check" class="w-5 h-5 text-primary"></i>
-                            </div>
-                            <p class="text-sm text-muted-foreground pt-1.5">Integrated worker attendance system</p>
-                        </div>
-                        <div class="flex items-start gap-4">
-                            <div class="w-9 h-9 rounded-md bg-primary/10 flex items-center justify-center shrink-0">
-                                <i data-lucide="map-pin" class="w-5 h-5 text-primary"></i>
-                            </div>
-                            <p class="text-sm text-muted-foreground pt-1.5">Multi-city rollout across Gujarat, then whole country</p>
-                        </div>
+                    <!-- Our Impact -->
+                    <div class="impact-block reveal reveal-delay-1">
+                        <h3 style="color:#fff">Our App Impact</h3>
+                        <div class="impact-bar"></div>
+                        <ul class="impact-list">
+                            <li class="impact-item">
+                                <div class="impact-dot"><i data-lucide="zap"></i></div>
+                                <p>Hiring time crushed — days collapse into minutes</p>
+                            </li>
+                            <li class="impact-item">
+                                <div class="impact-dot"><i data-lucide="graduation-cap"></i></div>
+                                <p>Creates income for college students & part-time workers</p>
+                            </li>
+                            <li class="impact-item">
+                                <div class="impact-dot"><i data-lucide="trending-up"></i></div>
+                                <p>Fewer staffing failures — reliability becomes the default</p>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Founders Section -->
-        <section class="px-6 py-16 bg-secondary/30" id="founders">
-            <div class="max-w-lg mx-auto">
-                <h2 class="text-4xl md:text-5xl font-display tracking-wide text-foreground mb-2">
-                    MEET THE FOUNDERS
-                </h2>
-                <div class="w-16 h-1 bg-primary mb-10 rounded-full"></div>
+        <!-- ═══════ FOUNDERS ═══════ -->
+        <section class="section" id="founders">
+            <div class="section-inner">
+                <div class="section-header reveal">
+                    <span class="section-label">The Team</span>
+                    <h2 class="section-title">Meet the <span class="text-gradient">Founders</span></h2>
+                    <p class="section-desc">Two engineers turning a broken industry into a trustworthy ecosystem.</p>
+                </div>
 
-                <div class="space-y-5">
+                <div class="founders-grid">
                     <!-- Founder 1 -->
-                    <div class="bg-card border border-border p-6 rounded-lg corner-cut">
-                        <div class="flex items-center gap-5 mb-4">
-                            <div class="w-16 h-18 rounded-lg bg-primary/20 flex items-center justify-center shrink-0">
-                                <img src="assets/profile_akash.jpg" class="rounded-lg w-full h-full object-cover" alt="Akash Dobariya">
+                    <div class="founder-card reveal reveal-delay-1">
+                        <div class="founder-header">
+                            <div class="founder-avatar">
+                                <img src="assets/profile_akash.jpg" alt="Akash Dobariya">
                             </div>
                             <div>
-                                <h3 class="font-display family-sans text-2xl tracking-wide text-foreground leading-tight">Akash Dobariya</h3>
-                                <p class="text-sm text-primary">Backend Developer</p>
+                                <h3 class="founder-name">Akash Dobariya</h3>
+                                <p class="founder-role">Backend Developer</p>
                             </div>
                         </div>
-
-                        <div class="space-y-2">
-                            <a href="tel:+918238218366" class="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
-                                <i data-lucide="phone" class="w-4 h-4 text-primary"></i>
-                                +91 82382 18366
+                        <div class="founder-links">
+                            <a href="tel:+918238218366" class="founder-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="founder-link-icon" style="fill:none;stroke:hsl(142,71%,45%)"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> +91 82382 18366
                             </a>
-                            <a href="mailto:AakashDobariya99@gmail.com" class="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
-                                <i data-lucide="mail" class="w-4 h-4 text-primary"></i>
-                                aakashdobariya99@gmail.com
+                            <a href="mailto:AakashDobariya99@gmail.com" class="founder-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="founder-link-icon" style="fill:none;stroke:hsl(142,71%,45%)"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg> aakashdobariya99@gmail.com
                             </a>
-                            <a href="https://www.linkedin.com/in/akash-dobariya-0b4828336/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
-                                <i data-lucide="linkedin" class="w-4 h-4 text-primary"></i>
-                                LinkedIn
+                            <a href="https://www.linkedin.com/in/akash-dobariya-0b4828336/" target="_blank" rel="noopener noreferrer" class="founder-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="founder-link-icon"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> LinkedIn
                             </a>
-                            <a href="https://github.com/Akash-dobariya" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
-                                <i data-lucide="github" class="w-4 h-4 text-primary"></i>
-                                GitHub
+                            <a href="https://github.com/Akash-dobariya" target="_blank" rel="noopener noreferrer" class="founder-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="founder-link-icon"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg> GitHub
                             </a>
                         </div>
                     </div>
+
                     <!-- Founder 2 -->
-                    <div class="bg-card border border-border p-6 rounded-lg corner-cut">
-                        <div class="flex items-center gap-5 mb-4">
-                            <div class="w-16 h-18 rounded-lg bg-primary/20 flex items-center justify-center shrink-0">
-                                <img src="assets/profile_piyush.jpg" class="rounded-lg w-full h-full object-cover" alt="Piyush Thummar">
+                    <div class="founder-card reveal reveal-delay-2">
+                        <div class="founder-header">
+                            <div class="founder-avatar">
+                                <img src="assets/profile_piyush.jpg" alt="Piyush Thummar">
                             </div>
                             <div>
-                                <h3 class="font-display family-sans text-2xl tracking-wide text-foreground leading-tight">Piyush Thummar</h3>
-                                <p class="text-sm text-primary">Full-Stack, Project Manager</p>
+                                <h3 class="founder-name">Piyush Thummar</h3>
+                                <p class="founder-role">Full-Stack, Project Manager</p>
                             </div>
                         </div>
-                        <div class="space-y-2">
-                            <a href="tel:+919601692507" class="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
-                                <i data-lucide="phone" class="w-4 h-4 text-primary"></i>
-                                +91 96016 92507
+                        <div class="founder-links">
+                            <a href="tel:+919601692507" class="founder-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="founder-link-icon" style="fill:none;stroke:hsl(142,71%,45%)"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> +91 96016 92507
                             </a>
-                            <a href="mailto:PiyushThummar7@gmail.com" class="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
-                                <i data-lucide="mail" class="w-4 h-4 text-primary"></i>
-                                piyushthummar7@gmail.com
+                            <a href="mailto:PiyushThummar7@gmail.com" class="founder-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="founder-link-icon" style="fill:none;stroke:hsl(142,71%,45%)"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg> piyushthummar7@gmail.com
                             </a>
-                            <a href="https://www.linkedin.com/in/piyushjt/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
-                                <i data-lucide="linkedin" class="w-4 h-4 text-primary"></i>
-                                LinkedIn
+                            <a href="https://www.linkedin.com/in/piyushjt/" target="_blank" rel="noopener noreferrer" class="founder-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="founder-link-icon"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> LinkedIn
                             </a>
-                            <a href="https://github.com/piyushJT" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
-                                <i data-lucide="github" class="w-4 h-4 text-primary"></i>
-                                GitHub
+                            <a href="https://github.com/piyushJT" target="_blank" rel="noopener noreferrer" class="founder-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="founder-link-icon"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg> GitHub
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
-        <!-- Footer Section -->
-        <footer class="px-6 py-12 border-t border-border">
-            <div class="max-w-lg mx-auto text-center">
-                <p class="text-xs text-muted-foreground">
-                    © 2026 EVENTO — Innovation Village, LJ University
-                </p>
-            </div>
-        </footer>
-
     </main>
+
+    <!-- ═══════ FOOTER ═══════ -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <img src="assets/evento-user-dark.jpg.jpeg" alt="EVENTO">
+                <span>EVENTO</span>
+            </div>
+            <p class="footer-copy">© 2026 EVENTO. All rights reserved.</p>
+        </div>
+    </footer>
 
     <script src="js/main.js"></script>
 </body>
