@@ -424,12 +424,15 @@ h1, h2, h3 { font-family: 'Bebas Neue', sans-serif; }
     letter-spacing: 0.1em; color: hsl(var(--foreground));
 }
 .footer-links { display: flex; gap: 1.5rem; }
+.footer-link-item,
+.footer-copy {
+    font-size: 0.75rem;
+    color: hsl(var(--muted-foreground));
+}
 .footer-link-item {
-    font-size: 0.75rem; color: hsl(var(--muted-foreground));
     text-decoration: none; transition: color 0.3s;
 }
 .footer-link-item:hover { color: hsl(var(--primary)); }
-.footer-copy { font-size: 0.75rem; color: hsl(var(--muted-foreground)); }
 
 /* ── Scroll Animations ───────────────────── */
 .reveal {
