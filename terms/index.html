@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service — EVENTO</title>
+    <meta name="description" content="Terms of Service for EVENTO." />
+    <meta name="author" content="EVENTO" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../js/tailwind-config.js"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <!-- Navbar -->
+    <nav class="navbar scrolled">
+        <div class="navbar-inner">
+            <a href="../" class="nav-logo">
+                <img src="../assets/evento-user-dark.jpg.jpeg" alt="EVENTO">
+                <span>EVENTO</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow flex flex-col justify-center items-center px-6 py-24 text-center animate-fade-in">
+        <h1 class="text-gradient text-5xl md:text-7xl font-bold tracking-wider mb-8">Terms of Service</h1>
+        <a href="../" class="btn-secondary">
+            <i data-lucide="arrow-left" style="width:18px;height:18px;"></i>
+            Back to Home
+        </a>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <img src="../assets/evento-user-dark.jpg.jpeg" alt="EVENTO">
+                <span>EVENTO</span>
+            </div>
+            <div class="footer-links">
+                <a href="../terms/" class="footer-link-item">Terms of Service</a>
+                <a href="../policy/" class="footer-link-item">Privacy Policy</a>
+            </div>
+            <p class="footer-copy">© 2026 EVENTO. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+        });
+    </script>
+</body>
+</html>
