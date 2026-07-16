@@ -51,8 +51,8 @@ Since this is a static site using CDNs, no build process is required.
 
 ## 👥 Founders
 
-*   **Akash Dobariya** - Backend Developer
 *   **Piyush Thummar** - Full-Stack, Project Manager
+*   **Akash Dobariya** - Backend Developer
 
 ---
 © 2026 EVENTO — Innovation Village, LJ University
