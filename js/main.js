@@ -37,14 +37,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ── Scroll Reveal Animations ────────────
     const revealElements = document.querySelectorAll('.reveal');
+    const checkReveal = () => {
+        revealElements.forEach(el => {
+            if (!el.classList.contains('visible')) {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight + 50 && rect.bottom > 0) {
+                    el.classList.add('visible');
+                }
+            }
+        });
+    };
+
     const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
             }
         });
-    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    }, { threshold: 0.05, rootMargin: '0px 0px 50px 0px' });
     revealElements.forEach(el => revealObserver.observe(el));
+    checkReveal();
+    setTimeout(checkReveal, 300);
+    window.addEventListener('scroll', checkReveal, { passive: true });
+    window.addEventListener('resize', checkReveal, { passive: true });
 
     // ── Counter Animation ───────────────────
     const counters = document.querySelectorAll('[data-count]');
@@ -150,9 +165,16 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', (e) => {
             e.preventDefault();
-            const target = document.querySelector(anchor.getAttribute('href'));
+            const targetId = anchor.getAttribute('href');
+            const target = document.querySelector(targetId);
             if (target) {
                 target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                let checks = 0;
+                const scrollCheckInterval = setInterval(() => {
+                    checkReveal();
+                    checks++;
+                    if (checks > 10) clearInterval(scrollCheckInterval);
+                }, 100);
             }
         });
     });
