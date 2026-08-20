@@ -164,17 +164,26 @@ document.addEventListener('DOMContentLoaded', () => {
     // ── Smooth Scroll for Anchors ───────────
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', (e) => {
-            e.preventDefault();
             const targetId = anchor.getAttribute('href');
-            const target = document.querySelector(targetId);
-            if (target) {
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                let checks = 0;
-                const scrollCheckInterval = setInterval(() => {
-                    checkReveal();
-                    checks++;
-                    if (checks > 10) clearInterval(scrollCheckInterval);
-                }, 100);
+            if (targetId === '#' || targetId === '#top') {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                return;
+            }
+            try {
+                const target = document.querySelector(targetId);
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    let checks = 0;
+                    const scrollCheckInterval = setInterval(() => {
+                        checkReveal();
+                        checks++;
+                        if (checks > 10) clearInterval(scrollCheckInterval);
+                    }, 100);
+                }
+            } catch (err) {
+                // Ignore invalid selector
             }
         });
     });
