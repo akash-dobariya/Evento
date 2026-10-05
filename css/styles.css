@@ -981,6 +981,22 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 1.25rem;
+}
+
+.footer-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s, transform 0.2s;
+}
+
+.footer-social a:hover {
+    transform: translateY(-2px);
+}
+
+.footer-social a:hover svg {
+    filter: drop-shadow(0 0 6px hsl(var(--primary) / 0.5));
 }
 
 .footer-link-item,
